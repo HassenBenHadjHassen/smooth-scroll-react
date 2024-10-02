@@ -1,0 +1,30 @@
+{
+  "name": "smooth-scroll-react",
+  "version": "1.0.0",
+  "description": "A smooth scroll component for React.",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "smooth scroll",
+    "react smooth scroll"
+  ],
+  "author": "Hassen Ben Hadj Hassen",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
