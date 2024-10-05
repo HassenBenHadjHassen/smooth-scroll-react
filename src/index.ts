@@ -39,6 +39,27 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({
     }
   };
 
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (scrolling || !targetRef.current) return;
+
+    let nextIndex = activeIndex;
+    if (direction === "vertical") {
+      if (event.key === "ArrowUp") nextIndex = activeIndex - 1;
+      if (event.key === "ArrowDown") nextIndex = activeIndex + 1;
+    } else {
+      if (event.key === "ArrowLeft") nextIndex = activeIndex - 1;
+      if (event.key === "ArrowRight") nextIndex = activeIndex + 1;
+    }
+
+    if (nextIndex >= 0 && nextIndex < targetRef.current!.children.length) {
+      scrollToSection(nextIndex);
+    } else if (loop) {
+      const newIndex =
+        nextIndex < 0 ? targetRef.current!.children.length - 1 : 0;
+      scrollToSection(newIndex);
+    }
+  };
+
   const scrollToSection = (index: number) => {
     if (!targetRef.current) return;
 
@@ -67,12 +88,14 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({
     const target = targetRef.current;
     if (target) {
       target.addEventListener("wheel", handleScroll);
+      window.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
       if (target) {
         target.removeEventListener("wheel", handleScroll);
       }
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [activeIndex, scrolling, targetRef]);
 
