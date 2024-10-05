@@ -5,20 +5,27 @@ smooth-scroll-react is a React component that provides smooth scrolling function
 ## Features
 
 - Smooth scrolling between sections of a page.
+
 - Customizable scroll speed, easing function, and direction.
+
 - Supports vertical and horizontal scrolling.
+
 - Looping functionality to wrap around sections.
+
 - Callbacks for when sections are entered or left.
+
 - Flexible and easy to integrate into any React project.
 
 ## Installation
 
 You can install the package via npm or yarn.
 
-For npm:  
+For npm:
+
 Run the command `npm install smooth-scroll-react`.
 
-For yarn:  
+For yarn:
+
 Run the command `yarn add smooth-scroll-react`.
 
 ## Basic Usage
@@ -27,17 +34,59 @@ To use the smooth-scroll-react package in a React project, import the component 
 
 You can use properties like targetRef, pageHeight, scrollSpeed, easing, loop, and direction to control the behavior of the scroll component.
 
+```typescript
+function App() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div style={{ height: "100vh", overflow: "hidden" }}>
+      <SmoothScroll
+        targetRef={scrollContainerRef}
+        pageHeight={100}
+        scrollSpeed={0.8}
+        loop={false}
+        easing="ease-in-out"
+        direction="vertical"
+        onSectionEnter={(index) => console.log("Entering section:", index)}
+        onSectionLeave={(index) => console.log("Leaving section:", index)}
+      />
+      <div
+        ref={scrollContainerRef}
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div style={{ height: "100vh", backgroundColor: "lightblue" }}>
+          Section 1
+        </div>
+        <div style={{ height: "100vh", backgroundColor: "lightcoral" }}>
+          Section 2
+        </div>
+        <div style={{ height: "100vh", backgroundColor: "lightgreen" }}>
+          Section 3
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
 ### Props
 
 The package includes a set of props to control its behavior:
 
 1.  `targetRef` is a required prop and refers to the div that holds your scrollable content. You must pass a reference to this container for smooth-scroll-react to work.
+
 2.  `pageHeight` is a number that defines the height of each section for vertical scrolling or width for horizontal scrolling. By default, it is set to 100, representing 100vh or 100vw.
+
 3.  `scrollSpeed` is a number that defines how quickly the transition between sections happens. The default speed is set to 1 second.
+
 4.  `easing` is a string that allows you to define how the scrolling feels. It accepts any CSS easing function like 'ease-in', 'ease-out', or 'linear'. The default is 'linear'.
+
 5.  `loop` is a boolean that determines whether scrolling loops back to the first section after reaching the end. The default value is set to false.
+
 6.  `direction` defines the scroll direction, which can either be vertical (default) or horizontal.
+
 7.  `onSectionEnter` is an optional callback function that fires when a new section is entered. It receives the index of the new section.
+
 8.  `onSectionLeave` is an optional callback function that fires when a section is left. It receives the index of the section that is being exited.
 
 ## Advanced Usage
@@ -66,10 +115,13 @@ Contributions to smooth-scroll-react are welcome. If you find a bug, want to req
 
 To set up the project for development:
 
-1.  Clone the repository by running the command: `git clone https://github.com/HassenBenHadjHassen/smooth-scroll-react.git`.
-2.  Install dependencies by running the command: `npm install`.
-3.  Run the development server by using the command: `npm run dev`.
-4.  To build the package for production, use the command: `npm run build`.
+1. Clone the repository by running the command: `git clone https://github.com/HassenBenHadjHassen/smooth-scroll-react.git`.
+
+2. Install dependencies by running the command: `npm install`.
+
+3. Run the development server by using the command: `npm run dev`.
+
+4. To build the package for production, use the command: `npm run build`.
 
 ## License
 
