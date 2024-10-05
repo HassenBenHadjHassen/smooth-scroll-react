@@ -1,6 +1,6 @@
 {
   "name": "smooth-scroll-react",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A smooth scroll component for React.",
   "main": "dist/index.js",
   "files": [
@@ -31,7 +31,6 @@
   },
   "homepage": "",
   "devDependencies": {
-    "@types/react": "^18.3.11",
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
