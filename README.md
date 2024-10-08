@@ -2,6 +2,10 @@
 
 smooth-scroll-react is a React component that provides smooth scrolling functionality for page transitions. It allows you to create vertical or horizontal scrolling through sections, with customizable settings for scroll speed, easing, page height, and more. This component is useful for creating dynamic, visually appealing scrolling experiences in your React applications.
 
+## Demo
+
+Check out the live demo here: [Smooth Scroll React Demo](https://scroll-demo.hassenbenhadjhassen.online/)
+
 ## Features
 
 - Smooth scrolling between sections of a page.
@@ -22,11 +26,11 @@ You can install the package via npm or yarn.
 
 For npm:
 
-Run the command `npm install smooth-scroll-react`.
+`npm install smooth-scroll-react`.
 
 For yarn:
 
-Run the command `yarn add smooth-scroll-react`.
+`yarn add smooth-scroll-react`.
 
 ## Basic Usage
 

@@ -19,7 +19,8 @@
     "smooth scroll",
     "react smooth scroll"
   ],
-  "author": "Hassen Ben Hadj Hassen <hassenbenhadjhassen@gmail.com>",
+  "homepage": "https://scroll-demo.hassenbenhadjhassen.online/",
+  "author": "Hassen Ben Hadj Hassen <hassenbenhadjhassen@gmail.com> https://scroll-demo.hassenbenhadjhassen.online",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,7 +30,6 @@
     "url": "https://github.com/HassenBenHadjHassen/smooth-scroll-react/issues",
     "email": "hassenbenhadjhassen@gmail.com"
   },
-  "homepage": "",
   "devDependencies": {
     "typescript": "^5.1.6"
   },
