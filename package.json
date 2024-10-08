@@ -1,6 +1,6 @@
 {
   "name": "smooth-scroll-react",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A smooth scroll component for React.",
   "main": "dist/index.js",
   "files": [
@@ -19,8 +19,8 @@
     "smooth scroll",
     "react smooth scroll"
   ],
-  "homepage": "https://scroll-demo.hassenbenhadjhassen.online/",
-  "author": "Hassen Ben Hadj Hassen <hassenbenhadjhassen@gmail.com> https://scroll-demo.hassenbenhadjhassen.online",
+  "homepage": "https://scroll-demo.hassenbenhadjhassen.com/",
+  "author": "Hassen Ben Hadj Hassen <hassenbenhadjhassen@gmail.com> https://hassenbenhadjhassen.com",
   "license": "MIT",
   "repository": {
     "type": "git",

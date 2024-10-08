@@ -4,7 +4,7 @@ smooth-scroll-react is a React component that provides smooth scrolling function
 
 ## Demo
 
-Check out the live demo here: [Smooth Scroll React Demo](https://scroll-demo.hassenbenhadjhassen.online/)
+Check out the live demo here: [Smooth Scroll React Demo](https://scroll-demo.hassenbenhadjhassen.com/)
 
 ## Features
 
